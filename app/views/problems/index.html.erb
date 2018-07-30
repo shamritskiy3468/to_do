@@ -4,17 +4,32 @@
 	<title></title>
 </head>
 <body>
-	<h2 class="">All Tasks</h2>
+	
 	<% if @problems.count.equal?(0) %>
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-4">You Have no boards yet :( </h1>
+	    <p class="lead">Here you can add your boards and manage them.</p>
+ 	</div>
+	</div>
 		<div class="container">
-			<%= link_to 'Create new Board ', new_problem_path, class: 'btn btn-success' %>
 		</div>	
 	<% else %>
+	<div class="jumbotron jumbotron-fluid">
+	  <div class="container">
+	    <h1 class="display-4">Your boards</h1>
+	    <p class="lead">Here you can add your boards and manage them.</p>
+ 	</div>
+	</div>
 		<% @problems.each do |problem| %>
 			<br>
-			<%= link_to problem.name %>
+				<h2><%= link_to problem.name, problem_path(problem) %></h2>
 			<br>
 		<% end %>
 	<% end %>
+	<br>
+	<%= link_to 'Create new Board ', new_problem_path, class: 'btn btn-success' %>
+	<br>
+	<br>
 </body>
 </html>
