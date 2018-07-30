@@ -9,7 +9,7 @@
 			<h2><%= @problem.name %></h2>
 			<%= @problem.created_at %>
 			<br><br>
-			<%= link_to 'Delete board', problem_path(@problem), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger'%>
+			<%= button_to 'Delete', problem_path(@problem), method: :delete, class: 'btn btn-danger mr-1'%>
 		</section>
 		<hr>
 		<section>

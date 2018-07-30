@@ -35,9 +35,8 @@ class ProblemsController < ApplicationController
 	end
 
 	def destroy
-		@problem = Problem.find(params[:id])
-		@problem.destroy
-		redirect_to action: :problem_path
+		@problem = Problem.destroy(params[:id])
+		redirect_to action: :index
 	end
 
 
