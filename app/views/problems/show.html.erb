@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<section>
+			<h2><%= @problem.name %></h2>
+			<%= @problem.created_at %>
+			<br><br>
+			<%= link_to 'Delete board', problem_path(@problem), method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger'%>
+		</section>
+		<hr>
+		<section>
+
+		</section>
+	</div>
+</body>
+</html>

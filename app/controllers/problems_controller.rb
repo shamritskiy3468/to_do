@@ -38,7 +38,8 @@ class ProblemsController < ApplicationController
 		@problem = Problem.find(params[:id])
 		@problem.destroy
 		redirect_to action: :problem_path
-	end	
+	end
+
 
 private
 
