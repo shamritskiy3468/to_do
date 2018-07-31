@@ -21,13 +21,6 @@ ActiveRecord::Schema.define(version: 2018_07_30_105252) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tables", force: :cascade do |t|
-    t.string "title"
-    t.text "body", default: [], array: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tasks", force: :cascade do |t|
     t.string "task_name"
     t.datetime "created_at", null: false
