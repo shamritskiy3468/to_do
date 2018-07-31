@@ -23,7 +23,9 @@
 	</div>
 		<% @problems.each do |problem| %>
 			<br>
-				<h2><%= link_to problem.name, problem_path(problem) %></h2>
+			<div class="rowlink">
+				<%= link_to problem.name, problem_path(problem), class: 'btn btn-primary btn-lg btn-block' %></p>
+			</div>
 			<br>
 		<% end %>
 	<% end %>

@@ -1,0 +1,16 @@
+.column {
+  float: left
+  padding: 10px
+  height: 500px
+.left
+	margin: 15px
+	width: 33%
+.right
+	margin: 15px
+	width: 33%
+.middle
+	margin: 15px
+  width: 33%
+.row:after
+  display: table
+  clear: both
