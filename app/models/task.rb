@@ -1,4 +1,4 @@
 class Task < ApplicationRecord
-	has_one :problem
+	belongs_to :problem
 	validates :task_name, presence: true
 end

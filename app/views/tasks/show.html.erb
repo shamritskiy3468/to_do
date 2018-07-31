@@ -1,5 +1,1 @@
-<% @problem.tasks.each do |task| %>
-  <br>
-  <h2><%= link_to task.task_name, tasks_path(task) %></h2>
-  <br>
-<% end %>
+<%= render 'task', task: @task %>

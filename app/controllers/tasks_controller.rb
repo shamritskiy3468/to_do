@@ -9,13 +9,15 @@ class TasksController < ApplicationController
   end
 
   def new
+    @problem = Problem.find(params[:problem_id])
     @task = Task.new
   end
 
   def create
     @task = Task.new(task_params)
+
     if @task.save
-      redirect_to @task
+      redirect_to problem_task_path(id: @task.id, problem_id: @task.problem_id)
     else
       render :edit
     end
@@ -33,6 +35,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:task_name)
+    params.require(:task).permit(:task_name, :problem_id)
   end
 end
