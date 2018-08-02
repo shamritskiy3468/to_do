@@ -1,3 +1,5 @@
+<% if @tasks.equal?(0) %>
+<h1>Oooops, nothing to </h1>
 <% @tasks.each do |task| %>
   <br>
   <h2><%= link_to task.task_name, task_path(task) %></h2>

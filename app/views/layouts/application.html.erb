@@ -7,11 +7,17 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+  .material-icons {vertical-align:-14%}
+  </style>
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><%= link_to 'ToDo', problems_path%></a>
+  <a class="navbar-brand" href="#" style="size: 30px;"><%= link_to 'ToDo', problems_path%></a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,17 +30,23 @@
           Dropdown
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Donate</a>
+          <a class="dropdown-item" href="#">Donate</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Donate</a>
         </div>
     </ul>
   </div>
+  <%= link_to problems_path do %>
+    <i class="material-icons w3-xxlarge">home</i>
+  <% end %>
 </nav>
-<div class="container">
-	<br>
-	<%= yield %>	
+<div class="bg">
+  <div class="container">
+    <br> 
+      <%= yield %>
 </div>
+</div> 
+
 </body>
 </html>

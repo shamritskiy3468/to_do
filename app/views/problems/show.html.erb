@@ -2,11 +2,17 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+  .material-icons {vertical-align:-14%}
+  </style>
   <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
-<div>
+  <div>
+    <br><br>
     <h2><%= @problem.name %></h2>
     <%= @problem.created_at %>
     <br><br>
@@ -20,6 +26,11 @@
           <%= button_to edit_problem_path(@problem), class: 'btn btn-primary mr-1' do %>
           <i class="fa fa-edit"></i>   Edit Board</button>
           <% end %>
+      </div>
+      <div class="column right">
+        <%= button_to new_problem_task_path(@problem.id), { method: :get, class: 'btn btn-success mr-1'} do %>
+          <i class="fa fa-folder"> Add new task</i>
+            <% end %>
       </div>
     </div>
     <br>

@@ -1,22 +1,19 @@
 <br>
 <h2><%= link_to task.task_name, problem_task_path(task) %></h2>
 	<small>
+		<small>
 		<div class="row">
 	      <div class="column left">
-	        <%= button_to problem_tasks_path(@problem), method: :delete, class: 'btn btn-danger mr-1' do %>
+	        <%= button_to problem_task_path(@task), method: :delete, class: 'btn btn-danger mr-1' do %>
 	            <i class="fa fa-trash"> Delete</i>
 	          <% end %>
 	      </div>
 	      <div class="column middle">
-	          <%= button_to edit_problem_task_path(@problem), class: 'btn btn-primary mr-1' do %>
+	          <%= button_to edit_problem_task_path(@task), class: 'btn btn-primary mr-1' do %>
 	          <i class="fa fa-edit"></i>   Edit</button>
 	          <% end %>
 	      </div>
-	      <div class="column right">
-	          <%= button_to new_problem_task_path(@problem.id), { method: :get, class: 'btn btn-outline-success mr-1'} do %>
-	          	<i class="fa fa-folder"> New</i>
-	          <% end %>
-	      </div>
 	    </div>
+	</small>
 	</small>
 <br>

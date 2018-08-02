@@ -1,3 +1,18 @@
-// Place all the styles related to the Task controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.column {
+  float: left
+  padding: 10px
+  height: 500px
+.left
+	margin: 15px
+	width: 33%
+.right
+	margin: 15px
+	width: 33%
+.middle
+	margin: 15px
+  width: 33%
+.row:after
+  display: table
+  clear: both
+.icon
+  background-image: image-url('back.png')
